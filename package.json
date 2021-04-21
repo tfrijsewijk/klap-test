@@ -1,0 +1,44 @@
+{
+  "name": "l2",
+  "version": "0.0.0",
+  "keywords": [
+    "l2"
+  ],
+  "repository": "Thomas Rijsewijk/l2",
+  "license": "MIT",
+  "author": "Thomas Rijsewijk <thomas.rijsewijk@infoprojects.nl>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "browser": "./dist/l2.js",
+      "import": "./dist/l2.js",
+      "require": "./dist/l2.cjs.js",
+      "umd": "./dist/l2.umd.js"
+    },
+    "./": "./",
+    "./package.json": "./package.json"
+  },
+  "main": "dist/l2.cjs.js",
+  "unpkg": "dist/l2.js",
+  "module": "dist/l2.js",
+  "source": "src/l2.ts",
+  "browser": "dist/l2.umd.js",
+  "types": "dist/l2.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "klap build",
+    "prepublishOnly": "klap build",
+    "start": "klap start",
+    "watch": "klap watch"
+  },
+  "devDependencies": {
+    "klap": "^6.1.5",
+    "typescript": "^4.2.4"
+  },
+  "klap": {
+    "example": "public/index.ts"
+  }
+}
